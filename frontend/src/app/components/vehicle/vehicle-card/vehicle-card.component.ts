@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IVehicle } from 'src/app/interface/i-vehicle';
 
 @Component({
   selector: 'app-vehicle-card',
@@ -6,11 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./vehicle-card.component.css']
 })
 export class VehicleCardComponent {
-  vehicle : any ={
-    id : 1,
-    type : 'van',
-    model : 'mazda',
-    price : '3400000'
-  }
+  @Input() vehicle!: IVehicle;
 
 }

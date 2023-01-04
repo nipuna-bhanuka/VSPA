@@ -1,0 +1,32 @@
+[
+    {
+      "Id" : 1,
+      "Type" : "Car",
+      "Model" : "BMW",
+      "Price" : 3400000
+    },
+    {
+    "Id" : 2,
+    "Type" : "Car",
+    "Model" : "WagonR",
+    "Price" : 4900000
+    },
+    {
+      "Id" : 3,
+      "Type" : "van",
+      "Model" : "mazda",
+      "Price" : 3000000
+    },
+    {
+      "Id" : 4,
+      "Type" : "van",
+      "Model" : "mazda",
+      "Price" : 3900000
+    },
+    {
+      "Id" : 5,
+      "Type" : "van",
+      "Model" : "toyota",
+      "Price" : 4900000
+    }
+  ]
