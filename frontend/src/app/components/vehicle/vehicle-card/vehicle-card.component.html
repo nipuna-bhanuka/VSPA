@@ -1,14 +1,15 @@
 <div class="card" style="width: 18rem;">
   <div class="img-wrapper">
-    <img class="card-img-top" src="../../../../assets/images/v.png" alt="v3">
+    <img *ngIf="vehicle.Image" class="card-img-top" src="{{vehicle.Image}}" alt="v3">
+    <img *ngIf="!vehicle.Image" class="card-img-top" src="../../../../assets/images/v.png" alt="v3">
     <ul class="list-inline text-center member-icons animate">
       <li class="list-inline-item">
-        <button class="btn btn-primary">
+        <button class="btn btn-primary" routerLink="/vehicle-details/{{vehicle.Id}}">
           <i class="fa-solid fa-pen-to-square"></i>
         </button>
       </li>
       <li class="list-inline-item">
-        <button class="btn btn-primary">
+        <button class="btn btn-primary" routerLink="/contact-details/{{vehicle.Id}}">
           <i class="fa-solid fa-address-book"></i>
         </button>
       </li>
