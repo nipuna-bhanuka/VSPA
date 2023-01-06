@@ -1,6 +1,7 @@
 import { getLocaleFirstDayOfWeek } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { IVehicle } from 'src/app/interface/i-vehicle';
+import { ActivatedRoute } from '@angular/router';
+import { IVehicle } from 'src/app/interface/iVehicle';
 import { VehicleService } from 'src/app/services/vehicle.service';
 
 
@@ -11,8 +12,9 @@ import { VehicleService } from 'src/app/services/vehicle.service';
 })
 export class VehicleListComponent implements OnInit{
   vehicles: any;
+  SellRent =1;
 
-  constructor(private vehicleservice: VehicleService){}
+  constructor(private route : ActivatedRoute ,private vehicleservice: VehicleService){}
 
 
   ngOnInit(): void{
@@ -20,6 +22,10 @@ export class VehicleListComponent implements OnInit{
   }
 
   getList(){
+    console.log(this.route.snapshot.url.toString());
+    if(this.route.snapshot.url.toString()){
+      this.SellRent =2;
+    }
     this.vehicleservice.getAllVehicles().subscribe(
       data=>{
         this.vehicles = data;

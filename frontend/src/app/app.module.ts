@@ -8,13 +8,19 @@ import { VehicleCardComponent } from './components/vehicle/vehicle-card/vehicle-
 import { VehicleListComponent } from './components/vehicle/vehicle-list/vehicle-list.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { VehicleService } from './services/vehicle.service';
+import { AddVehicleComponent } from './components/add-vehicle/add-vehicle.component';
+import { VehicleDetailsComponent } from './components/vehicle-details/vehicle-details.component';
+import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VehicleCardComponent,
     VehicleListComponent,
-    NavBarComponent
+    NavBarComponent,
+    AddVehicleComponent,
+    VehicleDetailsComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,
